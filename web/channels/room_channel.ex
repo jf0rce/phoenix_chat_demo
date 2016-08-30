@@ -1,5 +1,6 @@
 defmodule PhoenixChatDemo.RoomChannel do
   use PhoenixChatDemo.Web, :channel
+  require IEx
 
   def join("room:" <> _id, _params, socket) do
     {:ok, socket}

@@ -15,8 +15,8 @@ import "phoenix_html"
 import "phoenix"
 import "angular"
 import 'web/static/js/views/chat'
-import 'web/static/js/views/chatComponent'
 import 'web/static/js/views/latencyComponent'
+import 'web/static/js/views/chatComponent'
 
 // Import local files
 //
