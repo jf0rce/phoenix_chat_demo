@@ -1,0 +1,7 @@
+<div class="jumbotron">
+  <h2>Phoenix chat demo</h2>
+</div>
+
+<div ng-app="chat">
+  <chat-component></chat-component>
+</div>
