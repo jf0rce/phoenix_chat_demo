@@ -36,7 +36,7 @@
       </request>
 
       <for var="i" from="1" to="1000" incr="1">
-        <thinktime min="10" max="60" random="true"></thinktime>
+        <thinktime min="10" max="30" random="true"></thinktime>
         <request subst="true">
           <websocket type="message">
             {"topic":"room:%%_roomId%%","event":"publish_message","payload":{"username":"user","body":"test"},"ref":"%%ts_user_server:get_unique_id%%"}

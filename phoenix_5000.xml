@@ -10,8 +10,8 @@
   </servers>
 
   <load>
-    <arrivalphase phase="1" duration="30" unit="second">
-      <users maxnumber="10" arrivalrate="2" unit="second" />
+    <arrivalphase phase="1" duration="20" unit="second">
+      <users maxnumber="5000" arrivalrate="200" unit="second" />
     </arrivalphase>
   </load>
 

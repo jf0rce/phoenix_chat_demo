@@ -10,8 +10,8 @@
   </servers>
 
   <load>
-    <arrivalphase phase="1" duration="30" unit="second">
-      <users maxnumber="10" arrivalrate="2" unit="second" />
+    <arrivalphase phase="1" duration="3000" unit="second">
+      <users maxnumber="10000" arrivalrate="300" unit="second" />
     </arrivalphase>
   </load>
 
@@ -25,12 +25,8 @@
         <websocket type="connect" path="/socket/websocket"></websocket>
       </request>
 
-      <setdynvars sourcetype="random_number" start="1" end="100">
+      <setdynvars sourcetype="random_number" start="1" end="200">
         <var name="roomId" />
-      </setdynvars>
-
-      <setdynvars sourcetype="random_number" start="1" end="100">
-        <var name="userId" />
       </setdynvars>
 
       <request subst="true">
@@ -43,7 +39,7 @@
         <thinktime min="10" max="30" random="true"></thinktime>
         <request subst="true">
           <websocket type="message">
-            {"topic":"room:%%_roomId%%","event":"publish_message","payload":{"username":"user_%%_userId%%","body":"Hello! It's a static message"},"ref":"%%ts_user_server:get_unique_id%%"}
+            {"topic":"room:%%_roomId%%","event":"publish_message","payload":{"username":"user","body":"Hello! It's a static message"},"ref":"%%ts_user_server:get_unique_id%%"}
           </websocket>
         </request>
       </for>
